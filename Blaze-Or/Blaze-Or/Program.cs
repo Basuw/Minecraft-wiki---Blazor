@@ -1,9 +1,17 @@
 using Blaze_Or.Data;
+using Blazorise;
+using Blazorise.Bootstrap;
+using Blazorise.Icons.FontAwesome;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Web;
 
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddHttpClient();// define httpClient 
 
+builder.Services
+   .AddBlazorise()
+   .AddBootstrapProviders()
+   .AddFontAwesomeIcons();
 // Add services to the container.
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();

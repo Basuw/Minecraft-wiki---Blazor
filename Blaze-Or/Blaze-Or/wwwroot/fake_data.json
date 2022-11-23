@@ -1,0 +1,240 @@
+[
+  {
+    "id": 1,
+    "displayname": "Insurity",
+    "name": "insurity",
+    "stacksize": 62,
+    "maxdurability": 32,
+    "enchantcategories": [
+      "digger",
+      "digger"
+    ],
+    "repairwith": [],
+    "createddate": "2016-09-30",
+    "updateddate": null
+  },
+  {
+    "id": 2,
+    "displayname": "Anacho",
+    "name": "anacho",
+    "stacksize": 18,
+    "maxdurability": 107,
+    "enchantcategories": [
+      "digger"
+    ],
+    "repairwith": [
+      "dark_oak_planks",
+      "jungle_planks"
+    ],
+    "createddate": "2016-04-21",
+    "updateddate": "2017-02-21"
+  },
+  {
+    "id": 3,
+    "displayname": "Multiflex",
+    "name": "multiflex",
+    "stacksize": 29,
+    "maxdurability": 10,
+    "enchantcategories": [
+      "vanishable",
+      "armor_head"
+    ],
+    "repairwith": [
+      "jungle_planks",
+      "warped_planks"
+    ],
+    "createddate": "2017-03-23",
+    "updateddate": null
+  },
+  {
+    "id": 4,
+    "displayname": "Geekular",
+    "name": "geekular",
+    "stacksize": 37,
+    "maxdurability": 108,
+    "enchantcategories": [
+      "weapon",
+      "digger",
+      "weapon"
+    ],
+    "repairwith": [
+      "jungle_planks"
+    ],
+    "createddate": "2018-10-18",
+    "updateddate": null
+  },
+  {
+    "id": 5,
+    "displayname": "Portica",
+    "name": "portica",
+    "stacksize": 20,
+    "maxdurability": 45,
+    "enchantcategories": [],
+    "repairwith": [],
+    "createddate": "2021-04-10",
+    "updateddate": "2019-10-16"
+  },
+  {
+    "id": 6,
+    "displayname": "Roboid",
+    "name": "roboid",
+    "stacksize": 42,
+    "maxdurability": 22,
+    "enchantcategories": [
+      "digger",
+      "weapon",
+      "weapon"
+    ],
+    "repairwith": [],
+    "createddate": "2016-05-14",
+    "updateddate": "2014-03-10"
+  },
+  {
+    "id": 7,
+    "displayname": "Eschoir",
+    "name": "eschoir",
+    "stacksize": 43,
+    "maxdurability": 71,
+    "enchantcategories": [
+      "weapon"
+    ],
+    "repairwith": [
+      "jungle_planks"
+    ],
+    "createddate": "2018-01-22",
+    "updateddate": "2016-12-12"
+  },
+  {
+    "id": 8,
+    "displayname": "Comvoy",
+    "name": "comvoy",
+    "stacksize": 52,
+    "maxdurability": 30,
+    "enchantcategories": [
+      "digger",
+      "weapon"
+    ],
+    "repairwith": [
+      "dark_oak_planks"
+    ],
+    "createddate": "2017-01-15",
+    "updateddate": null
+  },
+  {
+    "id": 9,
+    "displayname": "Kraggle",
+    "name": "kraggle",
+    "stacksize": 47,
+    "maxdurability": 110,
+    "enchantcategories": [
+      "armor_head",
+      "breakable",
+      "digger"
+    ],
+    "repairwith": [
+      "birch_planks",
+      "spruce_planks"
+    ],
+    "createddate": "2021-04-22",
+    "updateddate": null
+  },
+  {
+    "id": 10,
+    "displayname": "Vetron",
+    "name": "vetron",
+    "stacksize": 59,
+    "maxdurability": 66,
+    "enchantcategories": [
+      "vanishable",
+      "armor_chest"
+    ],
+    "repairwith": [
+      "birch_planks"
+    ],
+    "createddate": "2018-09-05",
+    "updateddate": null
+  },
+  {
+    "id": 11,
+    "displayname": "Zillactic",
+    "name": "zillactic",
+    "stacksize": 12,
+    "maxdurability": 46,
+    "enchantcategories": [
+      "vanishable",
+      "armor"
+    ],
+    "repairwith": [
+      "acacia_planks",
+      "crimson_planks"
+    ],
+    "createddate": "2020-04-16",
+    "updateddate": "2018-05-28"
+  },
+  {
+    "id": 12,
+    "displayname": "Obliq",
+    "name": "obliq",
+    "stacksize": 15,
+    "maxdurability": 33,
+    "enchantcategories": [
+      "digger"
+    ],
+    "repairwith": [
+      "spruce_planks"
+    ],
+    "createddate": "2017-10-20",
+    "updateddate": null
+  },
+  {
+    "id": 13,
+    "displayname": "Tourmania",
+    "name": "tourmania",
+    "stacksize": 53,
+    "maxdurability": 11,
+    "enchantcategories": [
+      "vanishable",
+      "armor_head",
+      "digger"
+    ],
+    "repairwith": [
+      "crimson_planks",
+      "birch_planks"
+    ],
+    "createddate": "2019-02-16",
+    "updateddate": "2020-07-13"
+  },
+  {
+    "id": 14,
+    "displayname": "Prismatic",
+    "name": "prismatic",
+    "stacksize": 5,
+    "maxdurability": 33,
+    "enchantcategories": [
+      "vanishable",
+      "armor_chest"
+    ],
+    "repairwith": [
+      "jungle_planks",
+      "acacia_planks"
+    ],
+    "createddate": "2014-08-26",
+    "updateddate": null
+  },
+  {
+    "id": 15,
+    "displayname": "Calcula",
+    "name": "calcula",
+    "stacksize": 31,
+    "maxdurability": 68,
+    "enchantcategories": [
+      "armor_chest",
+      "armor_head"
+    ],
+    "repairwith": [
+      "jungle_planks"
+    ],
+    "createddate": "2018-03-21",
+    "updateddate": null
+  }
+]
