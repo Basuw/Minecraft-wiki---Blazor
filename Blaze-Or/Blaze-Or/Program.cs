@@ -1,9 +1,13 @@
 using Blaze_Or.Data;
+using Blaze_Or.Services;
+using Blazored.LocalStorage;
 using Blazorise;
 using Blazorise.Bootstrap;
 using Blazorise.Icons.FontAwesome;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Web;
+
+
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddHttpClient();// define httpClient 
@@ -13,9 +17,12 @@ builder.Services
    .AddBootstrapProviders()
    .AddFontAwesomeIcons();
 // Add services to the container.
+
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
 builder.Services.AddSingleton<WeatherForecastService>();
+builder.Services.AddBlazoredLocalStorage();
+builder.Services.AddScoped<IDataService, DataLocalService>();
 
 var app = builder.Build();
 

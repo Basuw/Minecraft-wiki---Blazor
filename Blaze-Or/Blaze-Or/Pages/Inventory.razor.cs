@@ -1,35 +1,36 @@
 ﻿using Blaze_Or.Models;
+using Blaze_Or.Services;
+using Blazored.LocalStorage;
 using Blazorise.DataGrid;
 using Microsoft.AspNetCore.Components;
 using System.Text.Json.Serialization;
 
-public partial class List
-{
-    private List<Item> items;
 
-    private int totalItem;
-
-    [Inject]
-    public HttpClient Http { get; set; }
-
-    [Inject]
-    public NavigationManager NavigationManager { get; set; }
-
-    private async Task OnReadData(DataGridReadDataEventArgs<Item> e)
+namespace Blaze_Or.Pages
+{    public partial class Inventory
     {
-        if (e.CancellationToken.IsCancellationRequested)
-        {
-            return;
-        }
+        private List<Item> items;
 
-        // When you use a real API, we use this follow code
-        //var response = await Http.GetJsonAsync<Item[]>( $"http://my-api/api/data?page={e.Page}&pageSize={e.PageSize}" );
-        var response = (await Http.GetFromJsonAsync<Item[]>($"{NavigationManager.BaseUri}fake-data.json")).Skip((e.Page - 1) * e.PageSize).Take(e.PageSize).ToList();
+        private int totalItem;
 
-        if (!e.CancellationToken.IsCancellationRequested)
+        [Inject]
+        public IDataService DataService { get; set; }
+
+        [Inject]
+        public IWebHostEnvironment WebHostEnvironment { get; set; }
+
+        private async Task OnReadData(DataGridReadDataEventArgs<Item> e)
         {
-            totalItem = (await Http.GetFromJsonAsync<List<Item>>($"{NavigationManager.BaseUri}fake-data.json")).Count;
-            items = new List<Item>(response); // an actual data for the current page
+            if (e.CancellationToken.IsCancellationRequested)
+            {
+                return;
+            }
+
+            if (!e.CancellationToken.IsCancellationRequested)
+            {
+                items = await DataService.List(e.Page, e.PageSize);
+                totalItem = await DataService.Count();
+            }
         }
     }
 }
