@@ -7,6 +7,8 @@ using Blazorise.Icons.FontAwesome;
 using Microsoft.Extensions.Options;
 using System.Globalization;
 using Microsoft.AspNetCore.Localization;
+using Blazored.Modal;
+
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddHttpClient();// define httpClient 
@@ -22,6 +24,7 @@ builder.Services.AddServerSideBlazor();
 builder.Services.AddSingleton<WeatherForecastService>();
 builder.Services.AddBlazoredLocalStorage();
 builder.Services.AddScoped<IDataService, DataLocalService>();
+builder.Services.AddBlazoredModal();
 
 // Add the controller of the app
 builder.Services.AddControllers();
