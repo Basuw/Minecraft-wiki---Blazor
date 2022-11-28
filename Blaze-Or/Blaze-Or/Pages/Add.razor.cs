@@ -37,7 +37,7 @@ namespace Blaze_Or.Pages
         {
             await DataService.Add(itemModel);
 
-            NavigationManager.NavigateTo("list");
+            NavigationManager.NavigateTo("inventory");
         }
 
         private async Task LoadImage(InputFileChangeEventArgs e)

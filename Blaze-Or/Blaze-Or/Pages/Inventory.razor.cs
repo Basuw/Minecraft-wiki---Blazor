@@ -1,6 +1,9 @@
-﻿using Blaze_Or.Models;
+﻿using Blaze_Or.Modals;
+using Blaze_Or.Models;
 using Blaze_Or.Services;
 using Blazored.LocalStorage;
+using Blazored.Modal;
+using Blazored.Modal.Services;
 using Blazorise.DataGrid;
 using Microsoft.AspNetCore.Components;
 using System.Text.Json.Serialization;
@@ -18,7 +21,11 @@ namespace Blaze_Or.Pages
 
         [Inject]
         public IWebHostEnvironment WebHostEnvironment { get; set; }
+        [Inject]
+        public NavigationManager NavigationManager { get; set; }
 
+        [CascadingParameter]
+        public IModalService Modal { get; set; }
         private async Task OnReadData(DataGridReadDataEventArgs<Item> e)
         {
             if (e.CancellationToken.IsCancellationRequested)
@@ -32,9 +39,23 @@ namespace Blaze_Or.Pages
                 totalItem = await DataService.Count();
             }
         }
-        private void OnDelete(int id)
+        private async void OnDelete(int id)
         {
+            var parameters = new ModalParameters();
+            parameters.Add(nameof(Item.Id), id);
 
+            var modal = Modal.Show<DeleteConfirmation>("Delete Confirmation", parameters);
+            var result = await modal.Result;
+
+            if (result.Cancelled)
+            {
+                return;
+            }
+
+            await DataService.Delete(id);
+
+            // Reload the page
+            NavigationManager.NavigateTo("inventory", true);
         }
     }
 }
