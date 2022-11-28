@@ -32,5 +32,9 @@ namespace Blaze_Or.Pages
                 totalItem = await DataService.Count();
             }
         }
+        private void OnDelete(int id)
+        {
+
+        }
     }
 }
