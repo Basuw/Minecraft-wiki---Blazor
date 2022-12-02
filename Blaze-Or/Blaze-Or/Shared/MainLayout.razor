@@ -5,14 +5,18 @@
     <div class="sidebar">
         <NavMenu />
     </div>
-
-    <div class="main">
+    <main>
+        <div class="top-row px-4">
+            <div class="px-4">
+                <CultureSelector />
+            </div>
+        </div>
         <CascadingValue Value="theme">
             <div class="content px-4">
                 @Body
             </div>
         </CascadingValue>
-    </div>
+    </main>
 </div>
 
 @code {

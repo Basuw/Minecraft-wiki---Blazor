@@ -6,6 +6,8 @@ using Blazored.Modal;
 using Blazored.Modal.Services;
 using Blazorise.DataGrid;
 using Microsoft.AspNetCore.Components;
+using Microsoft.Extensions.Localization;
+using System.Collections.Generic;
 using System.Text.Json.Serialization;
 
 
@@ -15,6 +17,9 @@ namespace Blaze_Or.Pages
         private List<Item> items;
 
         private int totalItem;
+
+        [Inject]
+        public IStringLocalizer<Inventory> Localizer { get; set; }
 
         [Inject]
         public IDataService DataService { get; set; }
