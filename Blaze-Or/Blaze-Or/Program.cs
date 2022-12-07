@@ -31,7 +31,7 @@ builder.Services.AddBlazoredModal();
 builder.Services.AddControllers();
 
 // Add the localization to the app and specify the resources path
-builder.Services.AddLocalization(opts => { opts.ResourcesPath = "../Resources"; });
+builder.Services.AddLocalization(opts => { opts.ResourcesPath = "Resources"; });
 
 // Configure the localtization
 builder.Services.Configure<RequestLocalizationOptions>(options =>

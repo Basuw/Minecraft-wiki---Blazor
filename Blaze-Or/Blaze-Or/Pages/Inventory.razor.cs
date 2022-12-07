@@ -19,7 +19,7 @@ namespace Blaze_Or.Pages
         private int totalItem;
 
         [Inject]
-        public IStringLocalizer<Inventory> Localizer { get; set; }
+        public IStringLocalizer<Inventory>? Localizer { get; set; }
 
         [Inject]
         public IDataService DataService { get; set; }
