@@ -14,5 +14,7 @@ namespace Blaze_Or.Models
         public List<string> RepairWith { get; set; }
         public DateTime CreatedDate { get; set; }
         public DateTime? UpdatedDate { get; set; }
+
+        public string ImageBase64 { get; set; }
     }
 }
