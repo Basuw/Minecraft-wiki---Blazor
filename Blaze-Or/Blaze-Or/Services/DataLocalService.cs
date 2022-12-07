@@ -1,4 +1,5 @@
-﻿using Blaze_Or.Factories;
+﻿using Blaze_Or.Components;
+using Blaze_Or.Factories;
 using Blaze_Or.Models;
 using Blazored.LocalStorage;
 using Microsoft.AspNetCore.Components;
@@ -174,5 +175,24 @@ namespace Blaze_Or.Services
             // Save the data
             await _localStorage.SetItemAsync("data", currentData);
         }
+        public Task<List<CraftingRecipe>> GetRecipes()
+        {
+            var items = new List<CraftingRecipe>
+        {
+            new CraftingRecipe
+            {
+                Give = new Item { DisplayName = "Diamond", Name = "diamond" },
+                Have = new List<List<string>>
+                {
+                    new List<string> { "dirt", "dirt", "dirt" },
+                    new List<string> { "dirt", null, "dirt" },
+                    new List<string> { "dirt", "dirt", "dirt" }
+                }
+            }
+        };
+
+            return Task.FromResult(items);
+        }
+
     }
 }
