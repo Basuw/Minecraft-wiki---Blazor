@@ -1,0 +1,15 @@
+kind: pipeline
+type: docker
+name: default
+ 
+trigger:
+  event:
+    - push
+
+steps:
+  - name: build
+    image: mcr.microsoft.com/dotnet/sdk:6.0
+    commands:
+      - cd Blaze-Or/
+      - dotnet restore Blaze-Or
+      - dotnet build Blaze-Or-c Release --no-restore
