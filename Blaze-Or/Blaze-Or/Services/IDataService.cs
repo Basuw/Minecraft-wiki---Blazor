@@ -1,4 +1,5 @@
-﻿using Blaze_Or.Models;
+﻿using Blaze_Or.Components;
+using Blaze_Or.Models;
 
 namespace Blaze_Or.Services
 {
@@ -13,6 +14,7 @@ namespace Blaze_Or.Services
 
         Task Update(int id, ItemModel model);
         Task Delete(int id);
+        Task<List<CraftingRecipe>> GetRecipes();
 
     }
 }
