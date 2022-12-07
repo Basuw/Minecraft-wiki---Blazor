@@ -23,7 +23,8 @@ builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
 builder.Services.AddSingleton<WeatherForecastService>();
 builder.Services.AddBlazoredLocalStorage();
-builder.Services.AddScoped<IDataService, DataLocalService>();
+//builder.Services.AddScoped<IDataService, DataLocalService>();
+builder.Services.AddScoped<IDataService, DataApiService>();
 builder.Services.AddBlazoredModal();
 
 // Add the controller of the app

@@ -35,6 +35,7 @@ namespace Blaze_Or.Services
             // Add the item to the current data
             currentData.Add(ItemFactory.Create(model));
 
+            /*
             // Save the image
             var imagePathInfo = new DirectoryInfo($"{_webHostEnvironment.WebRootPath}/images");
 
@@ -49,6 +50,7 @@ namespace Blaze_Or.Services
 
             // Write the file content
             await File.WriteAllBytesAsync(fileName.FullName, model.ImageContent);
+            */
 
             // Save the data
             await _localStorage.SetItemAsync("data", currentData);
@@ -115,7 +117,7 @@ namespace Blaze_Or.Services
             {
                 throw new Exception($"Unable to found the item with ID: {id}");
             }
-
+            /*
             // Save the image
             var imagePathInfo = new DirectoryInfo($"{_webHostEnvironment.WebRootPath}/images");
 
@@ -141,11 +143,11 @@ namespace Blaze_Or.Services
 
             // Write the file content
             await File.WriteAllBytesAsync(fileName.FullName, model.ImageContent);
-
+            */
+            
             // Modify the content of the item
             ItemFactory.Update(item, model);
-
-
+            
             // Save the data
             await _localStorage.SetItemAsync("data", currentData);
         }
@@ -159,7 +161,7 @@ namespace Blaze_Or.Services
 
             // Delete item in
             currentData.Remove(item);
-
+            /*
             // Delete the image
             var imagePathInfo = new DirectoryInfo($"{_webHostEnvironment.WebRootPath}/images");
             var fileName = new FileInfo($"{imagePathInfo}/{item.Name}.png");
@@ -168,7 +170,7 @@ namespace Blaze_Or.Services
             {
                 File.Delete(fileName.FullName);
             }
-
+            */
             // Save the data
             await _localStorage.SetItemAsync("data", currentData);
         }
