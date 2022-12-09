@@ -1,4 +1,4 @@
-﻿using Blaze_Or.Modals;
+﻿/*using Blaze_Or.Modals;
 using Blaze_Or.Models;
 using Blaze_Or.Services;
 using Blazored.LocalStorage;
@@ -8,11 +8,21 @@ using Blazorise.DataGrid;
 using Microsoft.AspNetCore.Components;
 using Microsoft.Extensions.Localization;
 using System.Collections.Generic;
-using System.Text.Json.Serialization;
+using System.Text.Json.Serialization;*/
 
+
+using Blaze_Or.Modals;
+using Blaze_Or.Models;
+using Blaze_Or.Services;
+using Blazored.Modal;
+using Blazored.Modal.Services;
+using Blazorise.DataGrid;
+using Microsoft.AspNetCore.Components;
+using Microsoft.Extensions.Localization;
 
 namespace Blaze_Or.Pages
-{    public partial class Inventory
+{    
+    public partial class Inventory
     {
         private List<Item> items;
 

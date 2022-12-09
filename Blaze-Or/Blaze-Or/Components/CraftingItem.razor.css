@@ -1,7 +1,16 @@
-﻿.item{
+﻿.item {
     width: 64px;
     height: 64px;
-    border: 1px solid;
+    border: 3px solid;
+    border-right-color: white;
+    border-bottom-color: white;
     overflow: hidden;
+    display: flex;
+    padding: 5px;
+    background: rgb(139,139,139);
 }
 
+.img-thumbnail {
+    border: none;
+    background: rgb(139,139,139);
+}
