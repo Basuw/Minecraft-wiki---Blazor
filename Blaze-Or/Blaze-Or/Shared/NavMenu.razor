@@ -7,27 +7,29 @@
     </div>
 </div>
 
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,1,0" />
+
 <div class="@NavMenuCssClass" @onclick="ToggleNavMenu">
     <nav class="flex-column">
 
         <div class="nav-item px-3">
             <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
-                <span class="oi oi-home" aria-hidden="true"></span> Home
+                <span class="material-symbols-outlined">house</span>Home
             </NavLink>
         </div>
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="counter">
-                <span class="oi oi-plus" aria-hidden="true"></span> Counter
-            </NavLink>
-        </div>
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="fetchdata">
-                <span class="oi oi-list-rich" aria-hidden="true"></span> Fetch data
-            </NavLink>
-        </div>
-        <div class="nav-item px-3">
+       <div class="nav-item px-3">
             <NavLink class="nav-link" href="Inventory">
-                <span class="oi oi-list-rich" aria-hidden="true"></span> Inventory
+                <span class="material-symbols-outlined">inventory_2</span> Inventory
+            </NavLink>
+        </div>
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="CraftingTable">
+                <span class="material-symbols-outlined">construction</span> Crafting
+            </NavLink>
+        </div>
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="DataManagement">
+               <span class="material-symbols-outlined">database</span>  Manage Datas
             </NavLink>
         </div>
     </nav>

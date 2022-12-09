@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Components;
 
 namespace Blaze_Or.Pages
 {
-    public partial class Inventory
+    public partial class CraftingTable
     {
         [Inject]
         public IDataService DataService { get; set; }
