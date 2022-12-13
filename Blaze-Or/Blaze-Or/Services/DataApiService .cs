@@ -50,15 +50,10 @@ namespace Blaze_Or.Services
         {
             await _http.DeleteAsync($"https://localhost:7234/api/Crafting/{id}");
         }
-        
+
         public async Task<List<CraftingRecipe>> GetRecipes()
         {
-            return new List<CraftingRecipe>();
-        }
-
-        /*public async Task<List<CraftingRecipe>> GetRecipes()
-        {
             return await _http.GetFromJsonAsync<List<CraftingRecipe>>("https://localhost:7234/api/Crafting/recipe");
-        }*/
+        }
     }
 }
