@@ -1,4 +1,5 @@
-﻿using Blaze_Or.Factories;
+﻿using Blaze_Or.Components;
+using Blaze_Or.Factories;
 using Blaze_Or.Models;
 
 namespace Blaze_Or.Services
@@ -48,6 +49,11 @@ namespace Blaze_Or.Services
         public async Task Delete(int id)
         {
             await _http.DeleteAsync($"https://localhost:7234/api/Crafting/{id}");
+        }
+
+        public Task<List<CraftingRecipe>> GetRecipes()
+        {
+            throw new NotImplementedException();
         }
 
         /*public async Task<List<CraftingRecipe>> GetRecipes()
