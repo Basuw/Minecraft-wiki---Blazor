@@ -51,16 +51,7 @@ namespace Blaze_Or.Services
             await _http.DeleteAsync($"https://localhost:7234/api/Crafting/{id}");
         }
 
-<<<<<<< HEAD
-        public Task<List<CraftingRecipe>> GetRecipes()
-        {
-            throw new NotImplementedException();
-        }
-
-        /*public async Task<List<CraftingRecipe>> GetRecipes()
-=======
         public async Task<List<CraftingRecipe>> GetRecipes()
->>>>>>> 7a331b8015a32361caa1eacf4830078aba10249f
         {
             return await _http.GetFromJsonAsync<List<CraftingRecipe>>("https://localhost:7234/api/Crafting/recipe");
         }
