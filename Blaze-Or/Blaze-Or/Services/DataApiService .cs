@@ -55,5 +55,12 @@ namespace Blaze_Or.Services
         {
             return await _http.GetFromJsonAsync<List<CraftingRecipe>>("https://localhost:7234/api/Crafting/recipe");
         }
+
+        public async Task<List<Item>> GetAllItems()
+        {
+            return await _http.GetFromJsonAsync<List<Item>>($"https://localhost:7234/api/Crafting/all");
+        }
+
+
     }
 }

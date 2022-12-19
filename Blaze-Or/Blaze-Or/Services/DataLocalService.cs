@@ -194,5 +194,9 @@ namespace Blaze_Or.Services
             return Task.FromResult(items);
         }
 
+        public Task<List<Item>> GetAllItems()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

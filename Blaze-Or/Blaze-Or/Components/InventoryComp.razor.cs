@@ -6,25 +6,26 @@ using System.Collections.Specialized;
 
 namespace Blaze_Or.Components
 {
-    public partial class InventoryComponent
+    public partial class InventoryComp
     {
-        public InventoryComponent()
-        {
-            Actions = new ObservableCollection<CraftingAction>();
-            Actions.CollectionChanged += OnActionsCollectionChanged;
-        }
-
-        public ObservableCollection<CraftingAction> Actions { get; set; }
         public Item CurrentDragItem { get; set; }
 
         [Parameter]
         public List<Item> Items { get; set; }
+
+        public ObservableCollection<InventoryAction> Actions { get; set; }
 
         /// <summary>
         /// Gets or sets the java script runtime.
         /// </summary>
         [Inject]
         internal IJSRuntime JavaScriptRuntime { get; set; }
+
+        public InventoryComp()
+        {
+            Actions = new ObservableCollection<InventoryAction>();
+            Actions.CollectionChanged += OnActionsCollectionChanged;
+        }
 
         private void OnActionsCollectionChanged(object? sender, NotifyCollectionChangedEventArgs e)
         {

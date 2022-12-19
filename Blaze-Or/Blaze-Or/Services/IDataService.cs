@@ -16,5 +16,6 @@ namespace Blaze_Or.Services
         Task Delete(int id);
         Task<List<CraftingRecipe>> GetRecipes();
 
+        Task<List<Item>> GetAllItems();
     }
 }

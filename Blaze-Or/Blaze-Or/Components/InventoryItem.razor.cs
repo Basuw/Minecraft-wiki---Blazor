@@ -16,7 +16,7 @@ namespace Blaze_Or.Components
         public bool NoDrop { get; set; }
 
         [CascadingParameter]
-        public Crafting Parent { get; set; }
+        public InventoryComp Parent { get; set; }
 
         internal void OnDragEnter()
         {
@@ -25,7 +25,7 @@ namespace Blaze_Or.Components
                 return;
             }
 
-            Parent.Actions.Add(new CraftingAction { Action = "Drag Enter", Item = this.Item, Index = this.Index });
+            Parent.Actions.Add(new InventoryAction { Action = "Drag Enter", Item = this.Item, Index = this.Index });
         }
 
         internal void OnDragLeave()
@@ -35,7 +35,7 @@ namespace Blaze_Or.Components
                 return;
             }
 
-            Parent.Actions.Add(new CraftingAction { Action = "Drag Leave", Item = this.Item, Index = this.Index });
+            Parent.Actions.Add(new InventoryAction { Action = "Drag Leave", Item = this.Item, Index = this.Index });
         }
 
         internal void OnDrop()
@@ -46,20 +46,16 @@ namespace Blaze_Or.Components
             }
 
             this.Item = Parent.CurrentDragItem;
-            Parent.RecipeItems[this.Index] = this.Item;
 
-            Parent.Actions.Add(new CraftingAction { Action = "Drop", Item = this.Item, Index = this.Index });
+            Parent.Actions.Add(new InventoryAction { Action = "Drop", Item = this.Item, Index = this.Index });
 
-            // Check recipe
-            Parent.CheckRecipe();
         }
 
         private void OnDragStart()
         {
             Parent.CurrentDragItem = this.Item;
 
-            Parent.Actions.Add(new CraftingAction { Action = "Drag Start", Item = this.Item, Index = this.Index });
+            Parent.Actions.Add(new InventoryAction { Action = "Drag Start", Item = this.Item, Index = this.Index });
         }
     }
 }
-

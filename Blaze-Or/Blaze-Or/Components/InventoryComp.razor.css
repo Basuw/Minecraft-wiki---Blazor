@@ -1,8 +1,8 @@
-﻿.css-grid {
-    grid-template-columns: repeat(4,minmax(0,1fr));
+﻿.css-grid{
+    grid-template-columns: repeat(8,minmax(0,1fr));
     gap: 10px;
     display: grid;
-    width: 286px;
+    height:min-content;
 }
 
 .css-recipe {
@@ -16,4 +16,8 @@
     border: 1px solid black;
     height: 250px;
     overflow: scroll;
+}
+.main-container{
+    display:flex;
+    justify-content:space-between;
 }
