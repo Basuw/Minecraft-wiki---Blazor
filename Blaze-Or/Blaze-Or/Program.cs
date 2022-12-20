@@ -7,6 +7,7 @@ using Blazorise.Icons.FontAwesome;
 using Microsoft.Extensions.Options;
 using System.Globalization;
 using Microsoft.AspNetCore.Localization;
+using System.Globalization;
 using Blazored.Modal;
 
 
@@ -38,12 +39,11 @@ builder.Services.Configure<RequestLocalizationOptions>(options =>
 {
     // Set the default culture of the web site
     options.DefaultRequestCulture = new RequestCulture(new CultureInfo("en-US"));
-    
+
     // Declare the supported culture
     options.SupportedCultures = new List<CultureInfo> { new CultureInfo("en-US"), new CultureInfo("fr-FR") };
     options.SupportedUICultures = new List<CultureInfo> { new CultureInfo("en-US"), new CultureInfo("fr-FR") };
 });
-
 
 var app = builder.Build();
 

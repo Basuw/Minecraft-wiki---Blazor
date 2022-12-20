@@ -1,17 +1,4 @@
-﻿/*using Blaze_Or.Modals;
-using Blaze_Or.Models;
-using Blaze_Or.Services;
-using Blazored.LocalStorage;
-using Blazored.Modal;
-using Blazored.Modal.Services;
-using Blazorise.DataGrid;
-using Microsoft.AspNetCore.Components;
-using Microsoft.Extensions.Localization;
-using System.Collections.Generic;
-using System.Text.Json.Serialization;*/
-
-
-using Blaze_Or.Modals;
+﻿using Blaze_Or.Modals;
 using Blaze_Or.Models;
 using Blaze_Or.Services;
 using Blazored.Modal;
@@ -29,7 +16,7 @@ namespace Blaze_Or.Pages
         private int totalItem;
 
         [Inject]
-        public IStringLocalizer<DataManagement>? Localizer { get; set; }
+        public IStringLocalizer<DataManagement> Localizer { get; set; }
 
         [Inject]
         public IDataService DataService { get; set; }

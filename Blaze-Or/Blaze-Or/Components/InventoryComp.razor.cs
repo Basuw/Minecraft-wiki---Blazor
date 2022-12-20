@@ -29,7 +29,7 @@ namespace Blaze_Or.Components
 
         private void OnActionsCollectionChanged(object? sender, NotifyCollectionChangedEventArgs e)
         {
-            JavaScriptRuntime.InvokeVoidAsync("Crafting.AddActions", e.NewItems);
+            JavaScriptRuntime.InvokeVoidAsync("InventoryComp.AddActions", e.NewItems);
         }
     }
 }

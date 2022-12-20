@@ -1,4 +1,4 @@
-﻿window.Crafting =
+﻿window.InventoryComp =
 {
     AddActions: function (data) {
 

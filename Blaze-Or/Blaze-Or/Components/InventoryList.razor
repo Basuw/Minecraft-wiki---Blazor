@@ -9,7 +9,7 @@
     <DataGridColumn TItem="Item" Field="@nameof(Item.Id)" Caption="#" Width="15%" Filterable="false"/>
     <DataGridColumn TItem="Item" Field="@nameof(Item.Id)" Caption="Image" Filterable="false">
     <DisplayTemplate>
-            <InventoryListImage Item="context" />
+            <InventoryItemList Item="context"></InventoryItemList>
     </DisplayTemplate>
 </DataGridColumn>
     <DataGridColumn TItem="Item" Field="@nameof(Item.DisplayName)" Caption="Display name" />

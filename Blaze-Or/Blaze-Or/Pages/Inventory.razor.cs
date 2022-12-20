@@ -7,11 +7,15 @@ using Blazored.Modal.Services;
 using Blazorise.DataGrid;
 using Microsoft.AspNetCore.Components;
 using Microsoft.Extensions.Localization;
+using System.Collections.Generic;
 
 namespace Blaze_Or.Pages
 {
     public partial class Inventory
     {
+        [Inject]
+        public IStringLocalizer<Inventory> Localizer { get; set; }
+
         [Inject]
         public IDataService DataService { get; set; }
 

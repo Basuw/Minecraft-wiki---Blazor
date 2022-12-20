@@ -1,4 +1,5 @@
 ﻿using Blaze_Or.Models;
+using Blazored.LocalStorage;
 using Blazorise;
 using Microsoft.AspNetCore.Components;
 
@@ -6,6 +7,9 @@ namespace Blaze_Or.Components
 {
     public partial class InventoryItem
     {
+        [Inject]
+        public ILocalStorageService LocalStorage { get; set; }
+
         [Parameter]
         public int Index { get; set; }
 
@@ -38,7 +42,7 @@ namespace Blaze_Or.Components
             Parent.Actions.Add(new InventoryAction { Action = "Drag Leave", Item = this.Item, Index = this.Index });
         }
 
-        internal void OnDrop()
+        internal async void OnDrop()
         {
             if (NoDrop)
             {
@@ -46,16 +50,32 @@ namespace Blaze_Or.Components
             }
 
             this.Item = Parent.CurrentDragItem;
-
+            await LocalStorage.SetItemAsync<Item>("data" + this.Index, this.Item);
             Parent.Actions.Add(new InventoryAction { Action = "Drop", Item = this.Item, Index = this.Index });
 
         }
 
-        private void OnDragStart()
+        private async void OnDragStart()
         {
             Parent.CurrentDragItem = this.Item;
-
+            this.Item = null;
+            await LocalStorage.SetItemAsync<Item>("data" + this.Index, null);
+            
             Parent.Actions.Add(new InventoryAction { Action = "Drag Start", Item = this.Item, Index = this.Index });
         }
+
+        protected override async Task OnAfterRenderAsync(bool firstRender)
+        {
+            base.OnAfterRenderAsync(firstRender);
+
+            if (!firstRender)
+            {
+                return;
+            }
+            Item = await LocalStorage.GetItemAsync<Item>("data" + this.Index);
+
+            StateHasChanged();
+        }
+
     }
 }
